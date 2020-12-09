@@ -1,3 +1,27 @@
+def merge(left,right):
+    sorted=[] #array to store the sorted list
+    i,j=0,0
+    while i<len(left) and j<len(right):
+        if left[i] < right[j]:
+            sorted.append(left[i])
+            i+=1
+        else:
+            sorted.append(right[j])
+            j+=1
+
+    sorted+=left[i:]
+    sorted+=right[j:]
+    return sorted
+
+def merge_sort(A):
+    "function to compute merge-sort"
+    if len(A)==1:
+        return li
+    middle=len(A)/2
+    left_li=merge_sort(A[:middle])
+    right_li=merge_sort(A[middle:])
+    return merge(left_li,right_li)
+
 A = input('Enter the list of numbers: ').split()
 A = [int(x) for x in alist]
 selection_sort(A)
