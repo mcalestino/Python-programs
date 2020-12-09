@@ -1,0 +1,5 @@
+A = input('Enter the list of numbers: ').split()
+A = [int(x) for x in alist]
+selection_sort(A)
+print('Sorted list: ', end='')
+print(A)
